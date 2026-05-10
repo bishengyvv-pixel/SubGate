@@ -60,6 +60,7 @@ docker compose -f docker/docker-compose.yml down
 启动后访问：
 - 前端：`http://localhost`
 - 后端 API：`http://localhost:3000/api`
+- API 文档（Swagger）：`http://localhost:3000/api/docs`
 - 健康检查：`http://localhost:3000/api/health`
 
 ### 本地开发
