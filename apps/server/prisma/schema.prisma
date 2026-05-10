@@ -60,6 +60,7 @@ model Vault {
   tags       String?
   expiryDate DateTime? @map("expiry_date")
   createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 

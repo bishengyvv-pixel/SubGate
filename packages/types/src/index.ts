@@ -66,10 +66,16 @@ export interface IVault {
   tags: string | null;
   expiryDate: string | null;
   createdAt: string;
+  updatedAt: string;
 }
 
 export interface ICreateVaultDto {
   contentUrl: string;
+  tags?: string;
+  expiryDate?: string;
+}
+
+export interface IUpdateVaultDto {
   tags?: string;
   expiryDate?: string;
 }

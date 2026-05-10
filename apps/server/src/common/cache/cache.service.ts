@@ -48,6 +48,24 @@ export class CacheService implements OnModuleDestroy {
     }
   }
 
+  async del(key: string): Promise<void> {
+    if (!this.available || !this.redis) return;
+    try {
+      await this.redis.del(key);
+    } catch {
+      // silently fail
+    }
+  }
+
+  async ttl(key: string): Promise<number> {
+    if (!this.available || !this.redis) return -2;
+    try {
+      return await this.redis.ttl(key);
+    } catch {
+      return -2;
+    }
+  }
+
   async onModuleDestroy() {
     if (this.redis) {
       await this.redis.quit();

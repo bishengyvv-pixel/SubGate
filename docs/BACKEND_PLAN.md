@@ -73,22 +73,22 @@
 ## 第三阶段：订阅仓库 & 完善
 
 ### 3.1 订阅仓库模块
-- [ ] 实现 `GET /api/vault` — 获取收藏列表
-- [ ] 实现 `POST /api/vault` — 添加到仓库
-- [ ] 实现 `GET /api/vault/:id` — 获取收藏详情
-- [ ] 实现 `PUT /api/vault/:id` — 更新备注/标签/过期日期
-- [ ] 实现 `DELETE /api/vault/:id` — 移除收藏
+- [x] 实现 `GET /api/vault` — 获取收藏列表
+- [x] 实现 `POST /api/vault` — 添加到仓库
+- [x] 实现 `GET /api/vault/:id` — 获取收藏详情
+- [x] 实现 `PUT /api/vault/:id` — 更新备注/标签/过期日期
+- [x] 实现 `DELETE /api/vault/:id` — 移除收藏
 
 ### 3.2 Redis 缓存基础设施
-- [ ] 配置 Redis 连接（`config/redis.config.ts`）
-- [ ] 封装 CacheService（set/get/del/ttl）
-- [ ] 配置内容生成缓存
-- [ ] 健康检查结果缓存
+- [x] 配置 Redis 连接（`config/redis.config.ts`）
+- [x] 封装 CacheService（set/get/del/ttl）
+- [x] 配置内容生成缓存
+- [x] 健康检查结果缓存
 
 ### 3.3 日志 & 可观测性
-- [ ] 集成请求日志拦截器（记录 method、path、耗时、IP）
-- [ ] 配置生成日志（记录用户 ID、目标格式、时间戳）
-- [ ] 异常日志记录（捕获堆栈信息）
+- [x] 集成请求日志拦截器（记录 method、path、耗时、IP）
+- [x] 配置生成日志（记录用户 ID、目标格式、时间戳）
+- [x] 异常日志记录（捕获堆栈信息）
 
 ---
 

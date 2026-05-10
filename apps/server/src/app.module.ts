@@ -9,6 +9,7 @@ import { HealthModule } from './modules/health/health.module';
 import { SourcesModule } from './modules/sources/sources.module';
 import { ConverterModule } from './modules/converter/converter.module';
 import { ConfigsModule } from './modules/configs/configs.module';
+import { VaultsModule } from './modules/vaults/vaults.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { ConfigsModule } from './modules/configs/configs.module';
     SourcesModule,
     ConverterModule,
     ConfigsModule,
+    VaultsModule,
   ],
   providers: [
     {
