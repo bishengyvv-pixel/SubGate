@@ -93,6 +93,8 @@ export class SourcesService {
     name: string;
     url: string;
     isActive: boolean;
+    isOnline: boolean | null;
+    lastCheckedAt: Date | null;
     note: string | null;
     createdAt: Date;
     updatedAt: Date;
@@ -103,6 +105,8 @@ export class SourcesService {
       name: source.name,
       url: source.url,
       isActive: source.isActive,
+      isOnline: source.isOnline,
+      lastCheckedAt: source.lastCheckedAt?.toISOString() ?? null,
       note: source.note,
       createdAt: source.createdAt.toISOString(),
       updatedAt: source.updatedAt.toISOString(),

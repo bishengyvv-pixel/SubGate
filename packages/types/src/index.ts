@@ -13,6 +13,8 @@ export interface ISource {
   name: string;
   url: string;
   isActive: boolean;
+  isOnline: boolean | null;
+  lastCheckedAt: string | null;
   note: string | null;
   createdAt: string;
   updatedAt: string;

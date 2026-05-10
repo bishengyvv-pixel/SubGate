@@ -45,10 +45,10 @@
 - [x] 实现 `DELETE /api/sources/:id` — 删除订阅源
 
 ### 2.2 订阅源健康检查
-- [ ] 实现健康检查服务（HTTP HEAD 请求检测 URL 可达性）
-- [ ] 使用 Redis 缓存检查结果（TTL 5 分钟）
-- [ ] 后台定时任务（Cron）每 30 分钟扫描所有活跃订阅源
-- [ ] 在线/离线状态更新到 Sources 表
+- [x] 实现健康检查服务（HTTP HEAD 请求检测 URL 可达性）
+- [x] 使用 Redis 缓存检查结果（TTL 5 分钟）
+- [x] 后台定时任务（Cron）每 30 分钟扫描所有活跃订阅源
+- [x] 在线/离线状态更新到 Sources 表
 
 ### 2.3 SubConverter 集成
 - [ ] 编写 SubConverter 配置管理（`config/subconverter.config.ts`）

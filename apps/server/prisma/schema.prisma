@@ -26,10 +26,12 @@ model Source {
   userId    String   @map("user_id") @db.Uuid
   name      String
   url       String
-  isActive  Boolean  @default(true) @map("is_active")
-  note      String?
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  isActive      Boolean   @default(true) @map("is_active")
+  isOnline      Boolean?  @map("is_online")
+  lastCheckedAt DateTime? @map("last_checked_at")
+  note          String?
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
