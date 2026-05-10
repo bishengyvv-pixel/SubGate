@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
+import { PrismaModule } from './prisma/prisma.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { HealthModule } from './modules/health/health.module';
 
 @Module({
   imports: [
@@ -10,6 +13,9 @@ import { APP_GUARD } from '@nestjs/core';
         limit: 100,
       },
     ]),
+    PrismaModule,
+    AuthModule,
+    HealthModule,
   ],
   providers: [
     {

@@ -20,18 +20,18 @@
 - [x] 创建 `prisma/prisma.service.ts` 全局数据库服务
 
 ### 1.3 用户认证模块
-- [ ] 实现 `POST /api/auth/register` — 注册（bcrypt 加密密码）
-- [ ] 实现 `POST /api/auth/login` — 登录（返回 JWT）
-- [ ] 实现 `GET /api/auth/profile` — 获取当前用户信息
-- [ ] 实现 `PUT /api/auth/password` — 修改密码
-- [ ] 实现 `DELETE /api/auth/account` — 注销账号
-- [ ] 实现 JWT 守卫 `common/guards/jwt-auth.guard.ts`
-- [ ] 实现 `@CurrentUser()` 装饰器 `common/decorators/current-user.decorator.ts`
+- [x] 实现 `POST /api/auth/register` — 注册（bcrypt 加密密码）
+- [x] 实现 `POST /api/auth/login` — 登录（返回 JWT）
+- [x] 实现 `GET /api/auth/profile` — 获取当前用户信息
+- [x] 实现 `PUT /api/auth/password` — 修改密码
+- [x] 实现 `DELETE /api/auth/account` — 注销账号
+- [x] 实现 JWT 守卫 `common/guards/jwt-auth.guard.ts`
+- [x] 实现 `@CurrentUser()` 装饰器 `common/decorators/current-user.decorator.ts`
 - [ ] 注册接口编写测试（集成测试）
 
 ### 1.4 健康检查
-- [ ] 实现 `GET /api/health` — 服务健康检查
-- [ ] 健康检查包含数据库连接状态检测
+- [x] 实现 `GET /api/health` — 服务健康检查
+- [x] 健康检查包含数据库连接状态检测
 
 ---
 
