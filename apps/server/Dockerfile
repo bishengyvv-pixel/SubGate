@@ -1,4 +1,5 @@
 FROM node:20-alpine AS build
+RUN apk add --no-cache openssl
 WORKDIR /app
 
 RUN npm install -g pnpm@9
@@ -17,6 +18,7 @@ WORKDIR /app/apps/server
 RUN pnpm exec prisma generate && pnpm exec nest build
 
 FROM node:20-alpine AS production
+RUN apk add --no-cache openssl
 WORKDIR /app
 
 RUN npm install -g pnpm@9
@@ -28,12 +30,13 @@ COPY packages/types/package.json packages/types/
 RUN pnpm install --frozen-lockfile --prod
 
 COPY --from=build /app/apps/server/dist apps/server/dist/
-COPY --from=build /app/apps/server/node_modules/.prisma apps/server/node_modules/.prisma/
 COPY --from=build /app/apps/server/prisma apps/server/prisma/
 COPY apps/server/docker-entrypoint.sh apps/server/
 
 RUN chmod +x apps/server/docker-entrypoint.sh
 
-EXPOSE 3000
 WORKDIR /app/apps/server
+RUN pnpm exec prisma generate
+
+EXPOSE 3000
 ENTRYPOINT ["./docker-entrypoint.sh"]
