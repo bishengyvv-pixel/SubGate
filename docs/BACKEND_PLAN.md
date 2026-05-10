@@ -16,7 +16,7 @@
 - [x] 编写 Prisma Schema：`Sources` 表
 - [x] 编写 Prisma Schema：`Configs` 表
 - [x] 编写 Prisma Schema：`Vault` 表
-- [ ] 执行 `prisma migrate dev` 生成迁移文件
+- [x] 执行 `prisma migrate dev` 生成迁移文件
 - [x] 创建 `prisma/prisma.service.ts` 全局数据库服务
 
 ### 1.3 用户认证模块
@@ -27,7 +27,7 @@
 - [x] 实现 `DELETE /api/auth/account` — 注销账号
 - [x] 实现 JWT 守卫 `common/guards/jwt-auth.guard.ts`
 - [x] 实现 `@CurrentUser()` 装饰器 `common/decorators/current-user.decorator.ts`
-- [ ] 注册接口编写测试（集成测试）
+- [x] 注册接口编写测试（集成测试）
 
 ### 1.4 健康检查
 - [x] 实现 `GET /api/health` — 服务健康检查
