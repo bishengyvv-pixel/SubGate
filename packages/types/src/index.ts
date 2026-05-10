@@ -3,6 +3,7 @@ export interface IUser {
   id: string;
   username: string;
   createdAt: string;
+  updatedAt: string;
 }
 
 // ---- Sources ----
@@ -80,6 +81,11 @@ export interface IRegisterDto {
   password: string;
 }
 
+export interface IUpdatePasswordDto {
+  oldPassword: string;
+  newPassword: string;
+}
+
 export interface ITokenResponse {
   accessToken: string;
   user: IUser;
@@ -90,4 +96,9 @@ export interface IApiResponse<T = unknown> {
   code: number;
   message: string;
   data: T;
+}
+
+export interface IPaginatedResponse<T> {
+  items: T[];
+  total: number;
 }

@@ -11,13 +11,13 @@
 - [x] 配置 CORS、helmet、请求限流中间件
 
 ### 1.2 数据库 & ORM
-- [ ] 配置 `@subgate/types` 共享类型包初始化
-- [ ] 编写 Prisma Schema：`Users` 表
-- [ ] 编写 Prisma Schema：`Sources` 表
-- [ ] 编写 Prisma Schema：`Configs` 表
-- [ ] 编写 Prisma Schema：`Vault` 表
+- [x] 配置 `@subgate/types` 共享类型包初始化
+- [x] 编写 Prisma Schema：`Users` 表
+- [x] 编写 Prisma Schema：`Sources` 表
+- [x] 编写 Prisma Schema：`Configs` 表
+- [x] 编写 Prisma Schema：`Vault` 表
 - [ ] 执行 `prisma migrate dev` 生成迁移文件
-- [ ] 创建 `prisma/prisma.service.ts` 全局数据库服务
+- [x] 创建 `prisma/prisma.service.ts` 全局数据库服务
 
 ### 1.3 用户认证模块
 - [ ] 实现 `POST /api/auth/register` — 注册（bcrypt 加密密码）
