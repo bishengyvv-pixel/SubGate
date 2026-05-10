@@ -51,14 +51,14 @@
 - [x] 在线/离线状态更新到 Sources 表
 
 ### 2.3 SubConverter 集成
-- [ ] 编写 SubConverter 配置管理（`config/subconverter.config.ts`）
-- [ ] 实现 SubConverter 进程调用服务（调用本地二进制或 HTTP API）
-- [ ] 实现 `GET /api/generate` — 核心生成接口
-- [ ] 支持多订阅源聚合（A + B → 单份配置）
-- [ ] 支持目标格式转换（Clash Meta / Surge / Quantumult X / Stash）
-- [ ] 实现 `GET /api/sub/:uuid` — 托管接口（无需鉴权，UUID 保护）
-- [ ] Redis 缓存生成的配置内容（TTL 可配置，默认 10 分钟）
-- [ ] 处理 SubConverter 进程超时与错误重试
+- [x] 编写 SubConverter 配置管理（`config/subconverter.config.ts`）
+- [x] 实现 SubConverter 进程调用服务（调用本地二进制或 HTTP API）
+- [x] 实现 `GET /api/generate` — 核心生成接口
+- [x] 支持多订阅源聚合（A + B → 单份配置）
+- [x] 支持目标格式转换（Clash Meta / Surge / Quantumult X / Stash）
+- [x] 实现 `GET /api/sub/:uuid` — 托管接口（无需鉴权，UUID 保护）
+- [x] Redis 缓存生成的配置内容（TTL 可配置，默认 10 分钟）
+- [x] 处理 SubConverter 进程超时与错误重试
 
 ### 2.4 配置模板模块
 - [ ] 实现 `GET /api/configs` — 获取用户配置模板列表

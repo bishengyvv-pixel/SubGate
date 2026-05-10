@@ -7,6 +7,7 @@ import { CacheModule } from './common/cache/cache.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { HealthModule } from './modules/health/health.module';
 import { SourcesModule } from './modules/sources/sources.module';
+import { ConverterModule } from './modules/converter/converter.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { SourcesModule } from './modules/sources/sources.module';
     AuthModule,
     HealthModule,
     SourcesModule,
+    ConverterModule,
   ],
   providers: [
     {
