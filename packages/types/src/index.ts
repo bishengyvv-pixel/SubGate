@@ -41,6 +41,7 @@ export interface IConfig {
   customRules: string | null;
   targetType: ConfigTargetType;
   createdAt: string;
+  updatedAt: string;
 }
 
 export type ConfigTargetType = "clash" | "surge" | "quantumultx" | "stash";

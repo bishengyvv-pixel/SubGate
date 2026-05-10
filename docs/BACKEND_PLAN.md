@@ -61,12 +61,12 @@
 - [x] 处理 SubConverter 进程超时与错误重试
 
 ### 2.4 配置模板模块
-- [ ] 实现 `GET /api/configs` — 获取用户配置模板列表
-- [ ] 实现 `POST /api/configs` — 创建配置模板
-- [ ] 实现 `GET /api/configs/:id` — 获取模板详情
-- [ ] 实现 `PUT /api/configs/:id` — 更新模板（自定义规则、目标类型）
-- [ ] 实现 `DELETE /api/configs/:id` — 删除模板
-- [ ] 预设模板数据初始化（"基础分流"、"全能拦截"、"AI 优先"）
+- [x] 实现 `GET /api/configs` — 获取用户配置模板列表
+- [x] 实现 `POST /api/configs` — 创建配置模板
+- [x] 实现 `GET /api/configs/:id` — 获取模板详情
+- [x] 实现 `PUT /api/configs/:id` — 更新模板（自定义规则、目标类型）
+- [x] 实现 `DELETE /api/configs/:id` — 删除模板
+- [x] 预设模板数据初始化（"基础分流"、"全能拦截"、"AI 优先"）
 
 ---
 

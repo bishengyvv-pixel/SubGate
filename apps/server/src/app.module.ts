@@ -8,6 +8,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { HealthModule } from './modules/health/health.module';
 import { SourcesModule } from './modules/sources/sources.module';
 import { ConverterModule } from './modules/converter/converter.module';
+import { ConfigsModule } from './modules/configs/configs.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ConverterModule } from './modules/converter/converter.module';
     HealthModule,
     SourcesModule,
     ConverterModule,
+    ConfigsModule,
   ],
   providers: [
     {
