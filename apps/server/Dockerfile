@@ -14,7 +14,7 @@ COPY packages/types/src packages/types/src/
 COPY apps/server/ apps/server/
 
 WORKDIR /app/apps/server
-RUN pnpm execprisma generate && pnpm execnest build
+RUN pnpm exec prisma generate && pnpm exec nest build
 
 FROM node:20-alpine AS production
 WORKDIR /app

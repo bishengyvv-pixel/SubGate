@@ -14,7 +14,7 @@ COPY packages/types/src packages/types/src/
 COPY apps/web/ apps/web/
 
 WORKDIR /app/apps/web
-RUN npx tsc -b && npx vite build
+RUN pnpm exec tsc -b && pnpm exec vite build
 
 FROM nginx:alpine AS production
 COPY apps/web/nginx.conf /etc/nginx/conf.d/default.conf
