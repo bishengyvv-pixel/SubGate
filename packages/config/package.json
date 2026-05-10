@@ -1,5 +1,10 @@
 {
   "name": "@subgate/config",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "main": "eslint.config.js",
+  "exports": {
+    "./eslint.config": "./eslint.config.js",
+    "./prettier.config": "./prettier.config.js"
+  }
 }
