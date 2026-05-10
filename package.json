@@ -1,0 +1,27 @@
+{
+  "name": "subgate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal centralized proxy subscription management and conversion platform",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter @subgate/web dev",
+    "dev:server": "pnpm --filter @subgate/server dev",
+    "dev": "pnpm run --parallel dev:web dev:server",
+    "build:web": "pnpm --filter @subgate/web build",
+    "build:server": "pnpm --filter @subgate/server build",
+    "build": "pnpm run build:web && pnpm run build:server",
+    "lint": "pnpm -r lint",
+    "db:migrate": "pnpm --filter @subgate/server db:migrate",
+    "db:generate": "pnpm --filter @subgate/server db:generate",
+    "docker:up": "docker compose -f docker/docker-compose.yml up -d",
+    "docker:down": "docker compose -f docker/docker-compose.yml down"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
