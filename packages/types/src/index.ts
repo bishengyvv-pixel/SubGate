@@ -15,6 +15,7 @@ export interface ISource {
   isActive: boolean;
   note: string | null;
   createdAt: string;
+  updatedAt: string;
 }
 
 export interface ICreateSourceDto {

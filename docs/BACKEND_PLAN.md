@@ -38,11 +38,11 @@
 ## 第二阶段：订阅源 & 转换引擎
 
 ### 2.1 订阅源管理模块
-- [ ] 实现 `GET /api/sources` — 获取当前用户订阅源列表（分页）
-- [ ] 实现 `POST /api/sources` — 添加订阅源（校验 URL 格式）
-- [ ] 实现 `GET /api/sources/:id` — 获取订阅源详情
-- [ ] 实现 `PUT /api/sources/:id` — 更新订阅源信息
-- [ ] 实现 `DELETE /api/sources/:id` — 删除订阅源
+- [x] 实现 `GET /api/sources` — 获取当前用户订阅源列表（分页）
+- [x] 实现 `POST /api/sources` — 添加订阅源（校验 URL 格式）
+- [x] 实现 `GET /api/sources/:id` — 获取订阅源详情
+- [x] 实现 `PUT /api/sources/:id` — 更新订阅源信息
+- [x] 实现 `DELETE /api/sources/:id` — 删除订阅源
 
 ### 2.2 订阅源健康检查
 - [ ] 实现健康检查服务（HTTP HEAD 请求检测 URL 可达性）
