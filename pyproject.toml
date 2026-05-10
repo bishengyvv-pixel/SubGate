@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+timeout = 30
+
+# 冒烟测试标记
+markers = [
+    "smoke: 冒烟测试 — 快速验证服务存活",
+    "integration: 集成测试 — 全流程串联",
+    "unit: 单元测试 — 端点独立验证",
+]
