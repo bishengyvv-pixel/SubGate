@@ -95,10 +95,10 @@
 ## 第四阶段：部署 & CI/CD
 
 ### 4.1 Docker 封装
-- [ ] 编写 `apps/server/Dockerfile`（多阶段构建）
-- [ ] 编写 `apps/web/Dockerfile`
-- [ ] 完善 `docker-compose.yml`（postgres + redis + server + web + subconverter）
-- [ ] SubConverter 镜像集成配置
+- [x] 编写 `apps/server/Dockerfile`（多阶段构建）
+- [x] 编写 `apps/web/Dockerfile`
+- [x] 完善 `docker-compose.yml`（postgres + redis + server + web + subconverter）
+- [x] SubConverter 镜像集成配置
 
 ### 4.2 CI/CD
 - [ ] GitHub Actions：代码检查（lint + type check）

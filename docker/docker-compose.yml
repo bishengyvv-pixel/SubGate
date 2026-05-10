@@ -11,6 +11,11 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U subgate"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   redis:
     image: redis:7-alpine
@@ -18,6 +23,51 @@ services:
     restart: unless-stopped
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  subconverter:
+    image: tindy2013/subconverter:latest
+    container_name: subgate-converter
+    restart: unless-stopped
+    ports:
+      - "25500:25500"
+
+  server:
+    build:
+      context: ..
+      dockerfile: apps/server/Dockerfile
+    container_name: subgate-server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://subgate:subgate_dev@postgres:5432/subgate
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-production}
+      JWT_EXPIRES_IN: 7d
+      REDIS_URL: redis://redis:6379
+      SUBCONVERTER_URL: http://subconverter:25500
+      CORS_ORIGIN: "*"
+      PORT: "3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ..
+      dockerfile: apps/web/Dockerfile
+    container_name: subgate-web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - server
 
 volumes:
   pgdata:
